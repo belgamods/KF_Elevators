@@ -11,7 +11,7 @@ All settings can be customized via the `config.lua` file, including:
 - **Framework Selection**
 - **Elevator Locations**: Define buildings and floors with coordinates.
 - **Marker Settings**: Adjust draw distance, interaction range, size, and color.
-- **UI Colors**: Change primary and background colors to match your server’s theme.
+- **UI Colors**: Change primary and background colors to match your server’s theme (all from config.lua)
 
 ## Installation
 

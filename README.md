@@ -1,6 +1,6 @@
-# KF_Elevators
+# KF_Elevators | Standalone version
 
-KF Elevators is a simple and highly customizable elevator system for FiveM servers, supporting ESX, QBCore and QBox frameworks with a custom NUI.
+KF Elevators is a simple and highly customizable elevator system for FiveM servers, Fully Standalone with a custom NUI.
 
 ![photo_2025-03-19_00-06-40](https://github.com/user-attachments/assets/7a6b24b8-c396-4aa7-929a-a393abe50169)
 
@@ -19,9 +19,6 @@ All settings can be customized via the `config.lua` file, including:
 2. Configure `config.lua` to match your server's needs.
 3. `ensure KF_Elevators`.
 
-## Dependencies
-
-- ESX, QBCore or QBox (depending on your framework choice)
 
 ## Development
 
@@ -31,10 +28,8 @@ Feel free to contribute to the development of this script. Fork the repository, 
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Contact
+## Credits
+All the credits to the real owner i make it just standalone :)
 
-- **Discord**: [KFDev Discord](https://discord.gg/kfdev)
-- **Tebex**: [KFDev Tebex](https://kfdev.tebex.io)
-- **Documentation**: [KFDev Documentation](https://docs.kfdev.it/)
 
 ---

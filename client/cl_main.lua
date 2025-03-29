@@ -1,31 +1,12 @@
-if Config.Framework == "esx" then
-    FrameworkObject = exports['es_extended']:getSharedObject()
-elseif Config.Framework == "qbcore" then
-    FrameworkObject = exports['qb-core']:GetCoreObject()
-end
-
 local PlayerLoaded = false
 local CurrentFloor = nil
 local NearElevator = false
 
 AddEventHandler('onClientResourceStart', function(resname)
     if GetCurrentResourceName() == resname then
-        if Config.Framework == "esx" then
-            while not FrameworkObject.IsPlayerLoaded() do
-                Wait(500)
-            end
-            PlayerLoaded = true
-        elseif Config.Framework == "qbcore" then
-            while not FrameworkObject.Functions.GetPlayerData().job do
-                Wait(500)
-            end
-            PlayerLoaded = true
-        else
-            PlayerLoaded = true
-        end
+        PlayerLoaded = true
     end
 end)
-
 
 Citizen.CreateThread(function()
     while true do
@@ -54,7 +35,7 @@ Citizen.CreateThread(function()
                             NearElevator = true
                             DrawText3D(coords.x, coords.y, coords.z + 1.0, "[E] - Elevator")
                             
-                            if IsControlJustPressed(0, 38) then -- E Key
+                            if IsControlJustPressed(0, 38) then
                                 SendNUIMessage({
                                     type = "open",
                                     place = building,
@@ -108,7 +89,6 @@ RegisterNUICallback('selectFloor', function(data, cb)
     SendNUIMessage({
         type = "close"
     })
-    --make a screen fade out
     DoScreenFadeOut(200)
     TriggerServerEvent('KF_Elevators:selectFloor', data.floor, data.building)
     Citizen.Wait(300)
